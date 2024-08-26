@@ -17,7 +17,7 @@ def bubble_sort(data):
                 data[i],data[i-1] = data[i-1],data[i]
                 count += 1
 
-# data = random_data(10,1,30)
-data = [15,11,1,3,8]
+data = random_data(10,1,30)
+# data = [15,11,1,3,8]
 print(data)
 print(bubble_sort(data))

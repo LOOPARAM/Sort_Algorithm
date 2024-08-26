@@ -31,7 +31,7 @@ def merge_sort(data):
             while(len(result)<=len(sub_data1+sub_data2)):
                 print("result",result,pointer,pointer1)
                 if(pointer1 == len(sub_data1)):
-                    
+                    ???
                 if(sub_data1[pointer] > sub_data2[pointer1]):
                     result.append(sub_data2[pointer1])
                     pointer1+=1

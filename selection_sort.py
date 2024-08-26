@@ -45,6 +45,7 @@ def selection_sort2(data):
     pointer = 0
     min_pointer = 0
     for i in range(0,len(data)):
+        print(data,i)
         min = data[pointer]
         min_pointer = pointer
         for i in range(pointer, len(data)):
@@ -58,6 +59,7 @@ def selection_sort2(data):
 
 def selection_sort3(data):
     for i in range(len(data)):
+        print(data,i)
         min_index = i
         for j in range(i + 1, len(data)):
             if data[j] < data[min_index]:
@@ -67,7 +69,7 @@ def selection_sort3(data):
 
 
 # print(random_data(4,1,2)) #길이4, 1~2 정수 뽑기
-data = random_data(30000,1,30)
+data = random_data(10,1,30)
 # data = [15,11,1,3,8]
 print(data)
 print(selection_sort3(data))

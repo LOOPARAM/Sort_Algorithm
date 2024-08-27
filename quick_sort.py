@@ -49,8 +49,17 @@ def quick_sort(data):
         # print(data)
         # time.sleep(1)
 
-data = random_data(50,1,50)
-# data = [20,18,50,40,9,19,5,25] #
+def quick_sort2(data):
+    if len(data) <= 1:
+        return data
+    
+    pivot = data[0]
+    left = [x for x in data[1:] if x <= pivot]
+    right = [x for x in data[1:] if x > pivot]
+    return quick_sort2(left) + [pivot] + quick_sort2(right)
+
+# data = random_data(50,1,50)
+data = [20,18,50,40,9,19,5,25] #
 # data = [5,3,6,1,2,4,7]
 print(" start data : ",data)
-print("result data : ",quick_sort(data))
+print("result data : ",quick_sort2(data))

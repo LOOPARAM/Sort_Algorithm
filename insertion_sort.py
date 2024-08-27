@@ -16,6 +16,7 @@ def insertion_sort(data):
     return data
 
 # data = [15,11,1,3,8]
-data = random_data(10,1,30)
+# data = random_data(10,1,30)
+data = [37,2,8,16,11,25,19,45,33,22]
 print(data)
 print(insertion_sort(data))

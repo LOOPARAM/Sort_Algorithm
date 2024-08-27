@@ -21,7 +21,7 @@ def split_data(data):
     else:
         sub_data1 = (data[0:(len(data)+1)//2])
         sub_data2 = (data[((len(data)+1)//2):len(data)])
-    
+    print(data,"나누기->",sub_data1,sub_data2)
     return sub_data1,sub_data2
 
 def sort(data1,data2):
@@ -48,17 +48,16 @@ def sort(data1,data2):
     return result
 
 def merge_sort(data):
-
     if(len(data) == 1):
         return data
     sub_data1 = merge_sort(split_data(data)[0])
     sub_data2 = merge_sort(split_data(data)[1])
-    # print(sub_data1,sub_data2)
     result = sort(sub_data1,sub_data2)
+    print("정렬->",result)
 
     return result
 
-data = random_data(10,1,30)
-# data = [43,38,82,19,57,26,64,71] #
+# data = random_data(10,1,30)
+data = [37,2,8,16,11,25,19,45,33,22]
 print(" start data : ",data)
 print("result data : ",merge_sort(data))
